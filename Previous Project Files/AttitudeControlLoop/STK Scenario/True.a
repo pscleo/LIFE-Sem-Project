@@ -1,0 +1,28 @@
+stk.v.12.0		
+
+# WrittenBy    STK_v12.10.0
+
+BEGIN Attitude
+
+    NumberOfAttitudePoints		 1
+
+    BlockingFactor		 20
+
+    InterpolationOrder		 1
+
+    CentralBody		 Earth
+
+    ScenarioEpoch		 15 Sep 2014 05:53:00.000000
+
+# Epoch in JDate format:	2456915.74513888888889
+# Epoch in YYDDD format:	  14258.24513888888889
+
+
+# Time of first point: 15 Sep 2014 05:53:00.000000000 UTCG = 2456915.74513888888889 JDate = 14258.24513888888889 YYDDD
+
+    CoordinateAxes		 ICRF
+
+    AttitudeTimeQuaternions		
+ 0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  0.0000000000000000e+00  1.0000000000000000e+00
+
+END Attitude

@@ -1,0 +1,75 @@
+<?xml version = "1.0" standalone = "yes"?>
+<VAR name = "JPL_SPICE">
+    <SCOPE Class = "CBOrbitModel">
+        <VAR name = "Version">
+            <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1210</INT>
+        </VAR>
+        <VAR name = "Description">
+            <STRING>&quot;JPL SPICE File&quot;</STRING>
+        </VAR>
+        <VAR name = "Type">
+            <STRING>&quot;SPICE&quot;</STRING>
+        </VAR>
+        <VAR name = "UserComment">
+            <STRING>&quot;JPL SPICE File&quot;</STRING>
+        </VAR>
+        <VAR name = "ReadOnly">
+            <BOOL>false</BOOL>
+        </VAR>
+        <VAR name = "Clonable">
+            <BOOL>true</BOOL>
+        </VAR>
+        <VAR name = "Category">
+            <STRING>&quot;Hyperion&quot;</STRING>
+        </VAR>
+        <VAR name = "IdentifierInformation">
+            <SCOPE>
+                <VAR name = "Identifier">
+                    <STRING>&quot;{1EFD3B58-3AF2-4A85-9EF0-561E23BE6564}&quot;</STRING>
+                </VAR>
+                <VAR name = "Version">
+                    <STRING>&quot;1&quot;</STRING>
+                </VAR>
+                <VAR name = "SdfInformation">
+                    <SCOPE>
+                        <VAR name = "Version">
+                            <STRING>&quot;0.0&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Url">
+                            <STRING>&quot;&quot;</STRING>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+                <VAR name = "SourceIdentifierInformation">
+                    <SCOPE>
+                        <VAR name = "Identifier">
+                            <STRING>&quot;{0F70A533-D2E7-4496-B1ED-DF9095714ABB}&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Version">
+                            <STRING>&quot;1&quot;</STRING>
+                        </VAR>
+                        <VAR name = "SdfInformation">
+                            <SCOPE>
+                                <VAR name = "Version">
+                                    <STRING>&quot;0.0&quot;</STRING>
+                                </VAR>
+                                <VAR name = "Url">
+                                    <STRING>&quot;&quot;</STRING>
+                                </VAR>
+                            </SCOPE>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+            </SCOPE>
+        </VAR>
+        <VAR name = "ShooterControls">
+            <LIST />
+        </VAR>
+        <VAR name = "SpiceIdNumber">
+            <STRING>&quot;607&quot;</STRING>
+        </VAR>
+    </SCOPE>
+</VAR>

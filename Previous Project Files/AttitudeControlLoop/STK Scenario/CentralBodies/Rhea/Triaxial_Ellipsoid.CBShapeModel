@@ -1,0 +1,87 @@
+<?xml version = "1.0" standalone = "yes"?>
+<VAR name = "Triaxial_Ellipsoid">
+    <SCOPE Class = "CBShapeModel">
+        <VAR name = "Version">
+            <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1210</INT>
+        </VAR>
+        <VAR name = "Description">
+            <STRING>&quot;Triaxial Ellipsoid Shape Model&quot;</STRING>
+        </VAR>
+        <VAR name = "Type">
+            <STRING>&quot;TriaxialEllipsoid&quot;</STRING>
+        </VAR>
+        <VAR name = "UserComment">
+            <STRING>&quot;Triaxial Ellipsoid Shape Model&quot;</STRING>
+        </VAR>
+        <VAR name = "ReadOnly">
+            <BOOL>false</BOOL>
+        </VAR>
+        <VAR name = "Clonable">
+            <BOOL>true</BOOL>
+        </VAR>
+        <VAR name = "Category">
+            <STRING>&quot;Rhea&quot;</STRING>
+        </VAR>
+        <VAR name = "IdentifierInformation">
+            <SCOPE>
+                <VAR name = "Identifier">
+                    <STRING>&quot;{5A092E3F-2A04-4A17-954A-EB272916D6DB}&quot;</STRING>
+                </VAR>
+                <VAR name = "Version">
+                    <STRING>&quot;1&quot;</STRING>
+                </VAR>
+                <VAR name = "SdfInformation">
+                    <SCOPE>
+                        <VAR name = "Version">
+                            <STRING>&quot;0.0&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Url">
+                            <STRING>&quot;&quot;</STRING>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+                <VAR name = "SourceIdentifierInformation">
+                    <SCOPE>
+                        <VAR name = "Identifier">
+                            <STRING>&quot;{EB1E466F-9A72-448F-BCF3-60B09F030B79}&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Version">
+                            <STRING>&quot;1&quot;</STRING>
+                        </VAR>
+                        <VAR name = "SdfInformation">
+                            <SCOPE>
+                                <VAR name = "Version">
+                                    <STRING>&quot;0.0&quot;</STRING>
+                                </VAR>
+                                <VAR name = "Url">
+                                    <STRING>&quot;&quot;</STRING>
+                                </VAR>
+                            </SCOPE>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+            </SCOPE>
+        </VAR>
+        <VAR name = "ShooterControls">
+            <LIST />
+        </VAR>
+        <VAR name = "a">
+            <QUANTITY Dimension = "DistanceUnit" Unit = "m">
+                <REAL>765000</REAL>
+            </QUANTITY>
+        </VAR>
+        <VAR name = "b">
+            <QUANTITY Dimension = "DistanceUnit" Unit = "m">
+                <REAL>763100</REAL>
+            </QUANTITY>
+        </VAR>
+        <VAR name = "c">
+            <QUANTITY Dimension = "DistanceUnit" Unit = "m">
+                <REAL>762400</REAL>
+            </QUANTITY>
+        </VAR>
+    </SCOPE>
+</VAR>

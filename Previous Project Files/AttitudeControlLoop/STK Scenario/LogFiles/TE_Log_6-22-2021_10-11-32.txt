@@ -1,0 +1,1 @@
+[10:11:32 StkTePluginPoint]  Creating a new scenario

@@ -1,0 +1,2431 @@
+
+Python Code Snippets
+Introduction
+The following code snippets demonstrate tasks that are commonly encountered when working with the STK Object Model.
+
+The code snippets in this topic were written using the win32com library from python. If you prefer to use the comtypes library, you will need to modify the snippets for them to work properly.
+How do I ...
+Initialization
+
+    Start STK and get a reference to IAgStkObjectRoot starting a new STK instance
+    Start STK and get a reference to IAgStkObjectRoot using a running STK instance
+
+STK Objects
+
+    Access
+        Add an Exclusion Zone access constraint
+        Add and configure a lighting condition access constraint
+        Add and configure a LOS sun exclusion access constraint
+        Add and configure a lunar elevation angle access constraint
+        Add and configure a sun elevation angle access constraint
+        Add and configure a third body obstruction access constraint
+        Add and configure an altitude access constraint
+        Add multiple access constraints of the same type to an STK Object
+        Compute Access with Advanced Settings
+        Compute an access between two STK Objects (using IAgStkObject interface)
+        Compute an access between two STK Objects (using object path)
+        Compute an access for one point
+        Compute and extract access interval times
+        Configure the access analysis time period to specified time instants.
+        Configure the access interval to the availability time span of the object where access is being computed to.
+        Get handle to the object access constraints
+        GetAccessBetweenObjectsByPath using the output of GetExistingAccesses
+        Remove all access constraints except for LOS
+        Return a list of available constraints
+
+    AdvCAT
+        Create a New AdvCAT Object
+
+    Aircraft
+        Add Array of Waypoints to Aircraft
+        Create a New Aircraft (on the current scenario central body)
+        Set Great Arc Propagator and Add Individual Waypoints to Aircraft
+        Set the Attitude of the Aircraft
+
+    Area Target
+        Create an area target (on the current scenario central body)
+        Define area target boundary and position from list of lat/lon/alt
+        Define area target boundary and position from list of lat/lon/alt (using common tasks)
+        List all points in an area target
+        Set an elliptical area target
+        Set an elliptical area target (using common tasks)
+
+    Chain
+        Create a chain (on the current scenario central body)
+        Define and compute a chain (advanced)
+        Define and compute a chain (basic)
+        Prints the strand intervals of chain object
+
+    Communications
+        Antenna
+            Create a New Antenna Object
+            Modify Antenna Graphics
+            Modify Antenna Model Type
+            Modify Antenna Orientation and Position
+            Modify Antenna Refraction
+
+        Receiver
+            Create a New Receiver Object
+            Modify Orientation of the Receiver Antenna
+            Modify Receiver Demodulator Properties
+            Modify Receiver Embedded Antenna
+            Modify Receiver Filter Properties
+            Modify Receiver Model Type
+            Modify Receiver Polarization Properties
+            Modify Receiver System Noise Temperature
+            Receiver additional Gain
+
+        Transmitter
+            Create a New Transmitter Object
+            Modify Transmitter Embedded Antenna
+            Modify Transmitter Filter
+            Modify Transmitter Model Type
+            Modify Transmitter Modulator Properties
+            Modify Transmitter Orientation and Position
+            Modify Transmitter Polarization Properties
+            Transmitter additional Gain
+
+    Constellation
+        Define a constellation
+
+    Coverage Definition
+        Compute Coverage
+        Create a New CoverageDefinition (on the current scenario central body)
+        Set Advanced Settings for Coverage
+        Set the Coverage Interval to an object's availability Analysis interval
+
+    Data Providers
+        Extracting Elements from Data Providers with Groups
+        Extracting Elements from Data Providers with PreData
+        Getting Data for a Single Point in Time
+        Getting Data for Specific Points and Elements
+        Access Data Provider with Groups
+        Using an Time Dependent Data Provider and requesting only specified elements
+        Using an interval Data Provider
+
+    EOIR
+        Scenario building for EOIR
+    Facility
+        Add an AzEl Mask to a Facility
+        Create a facility (on the current scenario central body)
+        Set the geodetic position of the facility
+    Graphics
+            Display the AzElMask in 2D/3D
+
+    Figure Of Merit
+        Configure the Contours of the FOM and define a color ramp
+        Create a new Figure of Merit of type Access Duration
+
+    Ground Vehicle
+        Add Array of Waypoints to Ground Vehicle and Interpolate over Terrain
+        Create a New Ground Vehicle (on the current scenario central body)
+        Set Great Arc Propagator and Add Individual Waypoints to Ground Vehicle
+
+    Line Target
+        Create a New LineTarget (on the current scenario central body)
+
+    Missile
+        Create a New Missile (on the current scenario central body)
+
+    MTO
+        Create a New MTO (on the current scenario central body)
+        Load MTO track points from file
+
+    Object Coverage
+        Compute Object Coverage
+
+    Planet
+        Create a New Planet
+
+        Graphics
+            Modify Planet 2D Properties
+
+    Satellite
+        Create a satellite (on the current scenario central body)
+        Export an ephemeris file to scenario folder
+        Set initial state of satellite and propagate
+        Set satellite attitude basic spinning
+        Set satellite attitude external
+        Set satellite attitude targeting
+        Set satellite propagator to Astrogator and clear segments
+        Set satellite propagator to HPOP and set force model properties
+        Set satellite propagator to J4 and assign cartesian position
+        Set satellite propagator to SGP4 and propagate
+        Set satellite propagator to SPICE and propagate
+
+        Astrogator
+            Run the Astrogator MCS
+
+        Graphics
+            Add a Data Display to the 3D Window
+            Add a Vector to display in 3D
+            Add Fixed System Orbit System in 3D Display
+            Change the 3D Model and marker properties
+            Change the Display Label of the vehicle
+            Change the graphics resolution of the orbit for a smooth path
+            Display droplines in 3D Window
+            Modify the Detail Thresholds Levels
+            Set 2D Display times to Custom and add intervals
+            Set 2D Graphics display properties
+            Set 2D Swath
+            Set 2D/3D Elevation Contours
+            Set 2D/3D Pass Display Properties
+            Set 2D/3D Range Contours
+            Set Vehicle Lighting Properties
+
+    Sensor
+        Attach a Sensor Object to a Vehicle
+        Sensor Body Mask
+        Set Sensor Properties
+
+        Graphics
+            Sensor Persistence
+
+Connect
+
+    Execute Connect command
+    Execute multiple Connect commands
+    Extract data from Connect result
+
+Camera
+
+    Change camera reference frame
+    Change camera view to Imagery Extents
+
+Graphics
+
+    GlobeOverlays
+        Add Imagery and Terrain to the Scene
+        Control Display of Stars and Water Texture
+        Control the Lighting of the 3D scene
+
+Graphics
+
+    Create a Bounding Sphere
+    Display a Primitive During an Interval
+    Draw a new Surface Extent Triangulator
+    Draw a new Surface Mesh
+    Draw a new Text Primitive
+    Draw a new Texture Screen Overlay
+    Draw a Point Primitive and set properties
+    Draw a Solid Box Primitive and set properties
+    Draw a Solid Cylinder Primitive and set properties
+    Draw a Solid Ellipsoid Primitive and set properties
+    GreatArcInterpolator Primitives
+
+Analysis Workbench
+
+    Create a Data Element Scalar
+    Create a new Aligned and Constrained Axes
+    Create a new Assembled System
+    Create a new Attitude Parameter Set
+    Create a new Between Vectors Angle
+    Create a new Collection of Interval List
+    Create a new Cross Product Vector
+    Create a new Custom Script Vector
+    Create a new Displacement Vector
+    Create a new Fixed at Time Instant Point
+    Create a new Fixed in Axes Vector
+    Create a new Fixed in System Point
+    Create a new Model Attachment Point
+    Create a new Orbit Parameter Set
+    Create a new Projection Vector
+    Create a new Time Instant
+    Create a new Time Interval
+    Create a new Vector Magnitude Scalar
+    Get a Scalar component and evaluate at a time
+    Get Center point and Inertial System of Earth CB
+    Get default VGT component on vehicle
+    Get Times From Defined Time Instant and create an cell array
+
+Scenario
+
+    Scenario Management
+        Change animation mode
+        Change scenario font
+        Close an open Scenario
+        Close STK
+        Create a new Scenario
+        Open a VDF
+        Reset the scenario time
+        Set unit preferences for Object Model
+
+Start STK and get a reference to IAgStkObjectRoot starting a new STK instance
+[Python]
+
+from win32com.client import GetActiveObject
+uiApplication = win32com.client.Dispatch('STK13.Application')
+uiApplication.Visible = True
+
+# Start new instance of STK
+from comtypes.client import CreateObject
+uiApplication = CreateObject('STK13.Application')
+uiApplication.Visible = True
+
+# Get our IAgStkObjectRoot interface
+root = uiApplication.Personality2
+
+
+Start STK and get a reference to IAgStkObjectRoot using a running STK instance
+[Python]
+
+# Get reference to running STK instance
+from win32com.client import GetActiveObject
+uiApplication = win32com.client.GetActiveObject('STK13.Application')
+uiApplication.Visible = True
+
+# if using the comtypes Library
+from comtypes.client import GetActiveObject
+uiApplication=GetActiveObject('STK13.Application')
+uiApplication.Visible=True
+
+# Get our IAgStkObjectRoot interface
+root = uiApplication.Personality2
+
+
+Add an Exclusion Zone access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+excludeZone = accessConstraints.AddNamedConstraint('ExclusionZone')
+excludeZone.MaxLat = 45
+excludeZone.MinLat = 15
+excludeZone.MinLon = -75
+excludeZone.MaxLon = -35
+
+
+Add and configure a lighting condition access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+# Condition constraint
+light = accessConstraints.AddConstraint(25) # eCstrLighting
+light.Condition = 0 # eDirectSun
+
+
+Add and configure a LOS sun exclusion access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+# Angle constraint
+cnstrAngle = accessConstraints.AddConstraint(29) # eCstrLOSSunExclusion
+cnstrAngle.Angle = 176.0
+
+
+Add and configure a lunar elevation angle access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+minmax = accessConstraints.AddConstraint(30) # eCstrLunarElevationAngle
+minmax.EnableMin = True
+minmax.Min = 11.1
+minmax.EnableMax = True
+minmax.Max = 88.8
+
+
+Add and configure a sun elevation angle access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+minmax = accessConstraints.AddConstraint(58) # eCstrSunElevationAngle
+minmax.EnableMin = True
+minmax.Min = 22.2
+minmax.EnableMax = True
+minmax.Max = 77.7
+
+
+Add and configure a third body obstruction access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessconstraints: Access Constraint collection
+# Get IAgAccessCnstrThirdBody interface
+thirdBodyConstraint = accessConstraints.AddConstraint(61) # eCstrThirdBodyObstruction
+
+# AvailableObstructions returns a one dimensional array of obstruction paths
+availableArray = thirdBodyConstraint.AvailableObstructions
+
+# In this example add all available obstructions
+print('Available obstructions')
+for i in range(0,len(availableArray)):
+   print(availableArray[i])
+   thirdBodyConstraint.AddObstruction(availableArray[i])
+
+# AssignedObstructions returns a one dimensional array of obstruction paths
+assignedArray = thirdBodyConstraint.AssignedObstructions
+
+print('Assigned obstructions')
+for i in range(0,len(assignedArray)):
+    print(assignedArray[i])
+
+
+Add and configure an altitude access constraint
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+# Attitude constraint
+altitude = accessConstraints.AddConstraint(2) # eCstrAltitude
+altitude.EnableMin = True
+altitude.Min = 20.5 # km
+
+
+Add multiple access constraints of the same type to an STK Object
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+
+# Add constraints
+# Only the eCstrApparentTime (4), eCstrDuration (13), eCstrGMT (16), eCstrIntervals (22), eCstrLocalTime (27) constraint
+# types can be added multiple times to the constraint collection.
+time1 = accessConstraints.AddConstraint(27) # eCstrLocalTime
+time1.Min = '00:00:00.000'
+time1.Max = '23:00:00.000'
+
+
+Compute Access with Advanced Settings
+[Python]
+
+# IAgStkAccess access: Access object
+
+access.Advanced.EnableLightTimeDelay = True
+access.Advanced.TimeLightDelayConvergence = .00005
+access.Advanced.AberrationType = 1 # eAberrationAnnual
+access.Advanced.UseDefaultClockHostAndSignalSense = False
+access.Advanced.ClockHost = 0 # eIvBase
+access.Advanced.SignalSenseOfClockHost = 0 # eIvTransmit
+access.ComputeAccess()
+
+
+Compute an access between two STK Objects (using IAgStkObject interface)
+[Python]
+
+# IAgSatellite satellite: Satellite object
+# IAgFacility facility: Facility object
+
+# Get access by STK Object
+access = satellite.GetAccessToObject(facility)
+
+# Compute access
+access.ComputeAccess()
+
+
+Compute an access between two STK Objects (using object path)
+[Python]
+
+# IAgSatellite satellite: Satellite object
+
+# Get access by object path
+access = satellite.GetAccess('Facility/MyFacility')
+
+# Compute access
+access.ComputeAccess()
+
+
+Compute an access for one point
+[Python]
+
+# IAgStkObject facility: Facility object
+onePtAccess = facility.CreateOnePointAccess('Satellite/MySatellite')
+
+# Configure properties (if necessary)
+onePtAccess.StartTime = root.CurrentScenario.StartTime
+onePtAccess.StopTime = root.CurrentScenario.StopTime
+onePtAccess.StepSize = 600
+onePtAccess.SummaryOption = 0 # eOnePtAccessSummaryDetailed
+
+# Compute results
+results = onePtAccess.Compute()
+
+# Print results
+for i in range(0,results.Count):
+    result = results.Item(i)
+    print('Time: #s HasAccess: #s' #  (result.Time, str(result.AccessSatisfied)))
+
+    for j in range(0,result.Constraints.Count)
+        constraint = result.Constraints.Item(j)
+        print('Constraint: #s Object: #s Status: #s Value:#s' # (constraint.Constraint, constraint.ObjectPath, constraint.Status, str(constraint.Value())))
+
+
+Compute and extract access interval times
+[Python]
+
+# IAgStkAccess access: Access calculation
+# Get and display the Computed Access Intervals
+intervalCollection = access.ComputedAccessIntervalTimes
+
+# Set the intervals to use to the Computed Access Intervals
+computedIntervals = intervalCollection.ToArray(0, -1)
+access.SpecifyAccessIntervals(computedIntervals)
+
+
+Configure the access analysis time period to specified time instants.
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+
+satellite = root.GetObjectFromPath('/Satellite/MySatellite')
+facility = root.GetObjectFromPath('/Facility/MyFacility')
+
+# For this code snippet, let's use the time interval when the satellite reached min and max altitude values.
+# Note, this assumes time at min happens before time at max.
+timeOfAltMin = satellite.Vgt.Events.Item('GroundTrajectory.Detic.LLA.Altitude.TimeOfMin')
+timeOfAltMax = satellite.Vgt.Events.Item('GroundTrajectory.Detic.LLA.Altitude.TimeOfMax')
+
+# Set the access time period with the times we figured out above.
+access = satellite.GetAccessToObject(facility)
+access.AccessTimePeriod = 2 # eUserSpecAccessTime
+accessTimePeriod = access.AccessTimePeriodData
+
+accessTimePeriod.AccessInterval.State = 2 # eCrdnSmartIntervalStateStartStop
+
+accessStartEpoch = accessTimePeriod.AccessInterval.GetStartEpoch()
+accessStartEpoch.SetImplicitTime(timeOfAltMin)
+accessTimePeriod.AccessInterval.SetStartEpoch(accessStartEpoch)
+
+accessStopEpoch = accessTimePeriod.AccessInterval.GetStopEpoch()
+accessStopEpoch.SetImplicitTime(timeOfAltMax)
+accessTimePeriod.AccessInterval.SetStopEpoch(accessStopEpoch)
+
+
+
+Configure the access interval to the availability time span of the object where access is being computed to.
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+
+satellite = root.GetObjectFromPath('/Satellite/MySatellite')
+facility = root.GetObjectFromPath('/Facility/MyFacility')
+access = satellite.GetAccessToObject(facility)
+
+access.AccessTimePeriod = 2 # eUserSpecAccessTime
+accessTimePeriod = access.AccessTimePeriodData
+
+if (satellite.Vgt.EventIntervals.Contains('AvailabilityTimeSpan')):
+    availabilityTimeSpan = satellite.Vgt.EventIntervals.Item('AvailabilityTimeSpan')
+    accessTimePeriod.AccessInterval.SetImplicitInterval(availabilityTimeSpan)
+
+
+
+Get handle to the object access constraints
+[Python]
+
+# IAgSatellite satellite: Satellite object
+accessConstraints = satellite.AccessConstraints
+
+
+GetAccessBetweenObjectsByPath using the output of GetExistingAccesses
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+scenario = root.CurrentScenario
+accesses = scenario.GetExistingAccesses()
+
+size = len(accesses)  # number of accesses
+
+object1 = accesses[0][0]   # e.g. "Satellite/MySatellite"
+object2 = accesses[0][1]  # e.g.  "Facility/MyFacility"
+computed = accesses[0][2]        # e.g. True  (if access has been computed)
+
+access = scenario.GetAccessBetweenObjectsByPath(object1, object2)
+
+
+Remove all access constraints except for LOS
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+for i in range(accessConstraints.Count-1,0,-1):
+    constraint = accessConstraints.Item(i).ConstraintName
+
+    if (constraint == 'LineOfSight') == False:
+        if (constraint == 'ThirdBodyObstruction'):
+            thirdBodyConstraint = accessConstraints.GetActiveNamedConstraint('ThirdBodyObstruction')
+            assignedArray = thirdBodyConstraint.AssignedObstructions
+
+            for j in range (0,len(assignedArray)):
+                thirdBodyConstraint.RemoveObstruction(assignedArray[j])
+            end
+
+        elif (constraint == 'ExclusionZone'):
+            accessConstraints.GetActiveNamedConstraint('ExclusionZone').RemoveAll()
+
+        else:
+            accessConstraints.RemoveNamedConstraint(constraint)
+
+
+Return a list of available constraints
+[Python]
+
+# IAgAccessConstraintCollection accessConstraints: Access Constraint collection
+constraintArray = accessConstraints.AvailableConstraints()
+
+print('List of Available Constraints:')
+for i in range(0,len(constraintArray)):
+   print(constraintArray[i])
+
+
+Create a New AdvCAT Object
+[Python]
+
+# IAgScenario scenario: Scenario object
+advCAT = scenario.Children.New(0,0) # eAdvCAT, AdvCAT
+
+
+Add Array of Waypoints to Aircraft
+[Python]
+
+# IAgAircraft aircraft: Aircraft object
+route = aircraft.Route
+ptsArray = [ [37.5378,14.2207,3.0480,0.0772,2][47.2602,30.5517,3.0480,0.0772,2] ]
+route.SetPointsSmoothRateAndPropagate(ptsArray)
+#Propagate the route
+route.Propagate()
+
+
+Create a New Aircraft (on the current scenario central body)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+aircraft = root.CurrentScenario.Children.New(1, 'MyAircraft') # eAircraft
+
+
+Set Great Arc Propagator and Add Individual Waypoints to Aircraft
+[Python]
+
+# IAgAircraft aircraft: Aircraft object
+# Set route to great arc, method and altitude reference
+aircraft.SetRouteType(9) # ePropagatorGreatArc
+route = aircraft.Route
+route.Method = 0 # eDetermineTimeAccFromVel
+route.SetAltitudeRefType(0) # eWayPtAltRefMSL
+# Add first point
+waypoint = route.Waypoints.Add()
+waypoint.Latitude = 37.5378
+waypoint.Longitude = 14.2207
+waypoint.Altitude = 5  # km
+waypoint.Speed = .1    # km/sec
+# Add second point
+waypoint2 = route.Waypoints.Add()
+waypoint2.Latitude = 47.2602
+waypoint2.Longitude = 30.5517
+waypoint2.Altitude = 5  # km
+waypoint2.Speed = .1    # km/sec
+#Propagate the route
+route.Propagate()
+
+
+Set the Attitude of the Aircraft
+[Python]
+
+# IAgAircraft aircraft: Aircraft object
+aircraft.Attitude.Basic.SetProfileType(24) # eCoordinatedTurn
+
+
+Create an area target (on the current scenario central body)
+[Python]
+
+#IAgStkObjectRoot root: STK Object Model Root
+
+# Create the AreaTarget on the current scenario central body (use
+# NewOnCentralBody to specify explicitly the central body)
+areaTarget = root.CurrentScenario.Children.New(2, 'MyAreaTarget') # eAreaTarget
+
+
+Define area target boundary and position from list of lat/lon/alt
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgAreaTarget areaTarget: AreaTarget object
+
+# By using the fine grained interfaces,
+# BeginUpdate/EndUpdate prevent intermediate redraws
+root.BeginUpdate()
+areaTarget.AreaType = 1 # ePattern
+patterns = areaTarget.AreaTypeData
+patterns.Add(48.897, 18.637)
+patterns.Add(46.534, 13.919)
+patterns.Add(44.173, 21.476)
+root.EndUpdate()
+areaTarget.AutoCentroid = True
+
+
+Define area target boundary and position from list of lat/lon/alt (using common tasks)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgAreaTarget areaTarget: AreaTarget object
+# Remove all points in the area target
+areaTarget.AreaTypeData.RemoveAll()
+
+# By using the CommonTasks interface,
+# make an array of lattitude and longitude boundary points
+boundary = [ [29, -12],[29, 34],[6, 34],[6, -12] ]
+
+# SetAreaTypePattern expects a two dimensional array of latitude and longitude values
+areaTarget.CommonTasks.SetAreaTypePattern(boundary)
+
+
+List all points in an area target
+[Python]
+
+# IAgAreaTarget areaTarget: AreaTarget object
+if (areaTarget.AreaType == 1) # ePattern
+
+    # Get IAgAreaTypePatternCollection interface from AreaTypeData
+    patternPoints = areaTarget.AreaTypeData
+
+    # ToArray returns a two dimensional array of latitude and longitude points
+    areaTargetPoints = patternPoints.ToArray()
+
+    print ('All points in Area Target')
+    for i in range(0,len(areaTargetPoints)):
+        print('Latitude #s Longitude: #s' # (str(areaTargetPoints[i][0]), str(areaTargetPoints[i][1])))
+
+
+Set an elliptical area target
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgAreaTarget areaTarget: AreaTarget object
+
+# By using the fine grained interfaces,
+# BeginUpdate/EndUpdate prevent intermediate redraws
+root.BeginUpdate()
+areaTarget.AreaType = 0 # eEllipse
+ellipse = areaTarget.AreaTypeData
+ellipse.SemiMajorAxis = 85.25 # in km (distance dimension)
+ellipse.SemiMinorAxis = 80.75 # in km (distance dimension)
+ellipse.Bearing = 44 # in deg (angle dimension)
+root.EndUpdate()
+
+
+Set an elliptical area target (using common tasks)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgAreaTarget areaTarget: AreaTarget object
+
+# By using the CommonTasks interface
+areaTarget.CommonTasks.SetAreaTypeEllipse(85.25, 80.75, 44)
+
+
+Create a chain (on the current scenario central body)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# Create the Chain on the current scenario central body (use
+# NewOnCentralBody to specify explicitly the central body)
+chain = root.CurrentScenario.Children.New(4, 'MyChain') # eChain
+
+
+Define and compute a chain (advanced)
+[Python]
+
+# IAgChain chain: Chain object
+# IAgSatellite satellite: Satellite object
+
+# Remove all previous accesses
+chain.ClearAccess()
+
+# Add some objects to chain
+chain.Objects.Add('Facility/MyFacility')
+chain.Objects.AddObject(satellite)
+
+# Configure chain parameters
+chain.AutoRecompute = False
+chain.EnableLightTimeDelay = False
+chain.TimeConvergence = 0.001
+chain.DataSaveMode = 2 # eSaveAccesses
+
+# Specify our own time period
+chain.SetTimePeriodType(2) # eUserSpecifiedTimePeriod
+
+# Get chain time period interface
+chainUserTimePeriod = chain.TimePeriod
+chainUserTimePeriod.SetTimePeriod(root.CurrentScenario.StartTime, root.CurrentScenario.StopTime) # Set to scenario period
+
+# Compute the chain
+chain.ComputeAccess()
+
+
+Define and compute a chain (basic)
+[Python]
+
+# IAgChain chain: Chain object
+
+# Add some objects to chain (using STK path)
+chain.Objects.Add('Facility/MyFacility')
+chain.Objects.Add('Satellite/MySatellite')
+
+# Compute the chain
+chain.ComputeAccess()
+
+
+Prints the strand intervals of chain object
+[Python]
+
+# IAgChain chain: Chain Object
+# Compute the chain access if not done already.
+chain.ComputeAccess()
+
+# Considered Start and Stop time
+print('Chain considered start time: #s' # chain.Vgt.Events.Item('ConsideredStartTime').FindOccurrence().Epoch)
+print('Chain considered stop time: #s' # chain.Vgt.Events.Item('ConsideredStopTime').FindOccurrence().Epoch)
+
+objectParticipationIntervals = chain.Vgt.EventIntervalCollections.Item('StrandAccessIntervals')
+intervalListResult = objectParticipationIntervals.FindIntervalCollection()
+
+for i in range(0,intervalListResult.IntervalCollections.Count):
+
+    if intervalListResult.IsValid:
+
+        print('Link Name: #s' # objectParticipationIntervals.Labels(i+1))
+        print('--------------')
+        for j in range(0,intervalListResult.IntervalCollections.Item(i).Count):
+
+            startTime = intervalListResult.IntervalCollections.Item(i).Item(j).Start
+            stopTime = intervalListResult.IntervalCollections.Item(i).Item(j).Stop
+            print('Start: #s Stop: #s' # (startTime, stopTime))
+
+
+Create a New Antenna Object
+[Python]
+
+# IAgSTKObject satellite: STK object
+antenna = satellite.Children.New(31, 'MyAntenna') # eAntenna
+
+
+Modify Antenna Graphics
+[Python]
+
+# IAgAntenna antenna: Antenna object
+contours = antenna.Graphics.ContourGraphics
+contours.SetContourType(0) # eAntennaContourTypeGain
+contours.Show = True
+for i in range(-30,30,5):
+    contours.Contour.Levels.Add(i)
+antenna.VO.ShowContours = True
+antenna.VO.VolumeGraphics.Show = True
+
+
+Modify Antenna Model Type
+[Python]
+
+# IAgAntenna antenna: Antenna object
+antenna.SetModel('Dipole')
+antennaModel = antenna.Model
+antennaModel.DesignFrequency = 15 # GHz
+antennaModel.Length = 1.5 # m
+antennaModel.LengthToWavelengthRatio = 45
+antennaModel.Efficiency = 85 # Percent
+
+
+Modify Antenna Orientation and Position
+[Python]
+
+# IAgAntenna antenna: Antenna object
+antOrientation = antenna.Orientation
+antOrientation.AssignAzEl(0,-90,1) # 1 represents Rotate About Boresight
+antOrientation.PositionOffset.X = 0.0 # m
+antOrientation.PositionOffset.Y = 1 # m
+antOrientation.PositionOffset.Z = 0.25 # m
+
+
+Modify Antenna Refraction
+[Python]
+
+# IAgAntenna antenna: Antenna object
+antenna.UseRefractionInAccess = True
+antenna.Refraction = 3 # eITU_R_P834_4
+refraction = antenna.RefractionModel
+refraction.Ceiling = 5000 # m
+refraction.AtmosAltitude = 10000 # m
+refraction.KneeBendFactor = 0.2
+
+
+Create a New Receiver Object
+[Python]
+
+# IAgSTKObject satellite: STK object
+receiver = satellite.Children.New(17, 'MyReceiver') # eReceiver
+
+
+Modify Orientation of the Receiver Antenna
+[Python]
+
+# Complex receivers Only
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+antennaControl = recModel.AntennaControl
+antOrientation = antennaControl.EmbeddedModelOrientation
+antOrientation.AssignAzEl(45, 85, 1) # 1 represents Rotate About Boresight
+antOrientation.PositionOffset.X = 0.5 # m
+antOrientation.PositionOffset.Y = 0.75 # m
+antOrientation.PositionOffset.Z = 1 # m
+
+
+Modify Receiver Demodulator Properties
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+recModel.AutoSelectDemodulator = False
+recModel.SetDemodulator('16PSK')
+
+
+Modify Receiver Embedded Antenna
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+antennaControl = recModel.AntennaControl
+antennaControl.SetEmbeddedModel('Hemispherical')
+antennaControl.EmbeddedModel.Efficiency = 85 # Percent
+
+
+Modify Receiver Filter Properties
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+recModel.EnableFilter = True
+recModel.SetFilter('Bessel')
+recFilter = recModel.Filter
+recFilter.LowerBandwidthLimit = -20
+recFilter.UpperBandwidthLimit = 20
+recFilter.CutoffFrequency = 10
+
+
+Modify Receiver Model Type
+[Python]
+
+# IAgReceiver receiver: Receiver object
+receiver.SetModel('Complex Receiver Model')
+recModel = receiver.Model
+recModel.AutoTrackFrequency = False
+recModel.Frequency = 11.81
+
+
+Modify Receiver Polarization Properties
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+recModel.EnablePolarization = True
+recModel.SetPolarizationType(3) # ePolarizationTypeLinear
+polarization = recModel.Polarization
+polarization.ReferenceAxis = 2 # ePolarizationReferenceAxisZ
+polarization.CrossPolLeakage = -60 # dB
+
+
+Modify Receiver System Noise Temperature
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+recModel.SystemNoiseTemperature.ConstantNoiseTemperature = 280 # K
+
+
+Receiver additional Gain
+[Python]
+
+# IAgReceiver receiver: Receiver object
+recModel = receiver.Model
+gain = recModel.PreReceiveGainsLosses.Add(5) # dB
+gain.Identifier = 'Example Gain'
+
+
+Create a New Transmitter Object
+[Python]
+
+# IAgSTKObject satellite: STK object
+transmitter = satellite.Children.New(24, 'MyTransmitter') # eTransmitter
+
+
+Modify Transmitter Embedded Antenna
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+antennaControl = txModel.AntennaControl
+antennaControl.SetEmbeddedModel('Isotropic')
+antennaControl.EmbeddedModel.Efficiency = 85 # Percent
+
+
+Modify Transmitter Filter
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+txModel.EnableFilter = True
+txModel.SetFilter('Butterworth')
+recFilter = txModel.Filter
+recFilter.LowerBandwidthLimit = -20
+recFilter.UpperBandwidthLimit = 20
+recFilter.CutoffFrequency = 10
+
+
+Modify Transmitter Model Type
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+transmitter.SetModel('Complex Transmitter Model')
+txModel = transmitter.Model
+txModel.Frequency = 14 # GHz
+txModel.Power = 25 # dBW
+txModel.DataRate = 15 # Mb/sec
+
+
+Modify Transmitter Modulator Properties
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+txModel.SetModulator('BPSK')
+txModel.Modulator.AutoScaleBandwidth = True
+
+
+Modify Transmitter Orientation and Position
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+antennaControl = txModel.AntennaControl
+antOrientation = antennaControl.EmbeddedModelOrientation
+antOrientation.AssignAzEl(0, 90, 1) # 1 represents Rotate About Boresight
+antOrientation.PositionOffset.X = 0.0 # m
+antOrientation.PositionOffset.Y = 1 # m
+antOrientation.PositionOffset.Z = 0.25 # m
+
+
+Modify Transmitter Polarization Properties
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+txModel.EnablePolarization = True
+recModel.SetPolarizationType(3) # ePolarizationTypeLinear
+polarization = txModel.Polarization
+polarization.ReferenceAxis = 1  # ePolarizationReferenceAxisY
+polarization.TiltAngle = 15 # deg
+
+
+Transmitter additional Gain
+[Python]
+
+# IAgTransmitter transmitter: Transmitter object
+txModel = transmitter.Model
+gain = txModel.PostTransmitGainsLosses.Add(-5) # dB
+gain.Identifier = 'Example Loss'
+
+
+Define a constellation
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+constellation = root.CurrentScenario.Children.New(6,'MyConstellation') # eConstellation
+constellation.Objects.AddObject(satellite)
+constellation.Objects.Add('*/Facility/MyFacility')
+
+
+Compute Coverage
+[Python]
+
+# IAgCoverageDefinition coverage: Coverage object
+coverage.ComputeAccesses()
+
+
+Create a New CoverageDefinition (on the current scenario central body)
+[Python]
+
+# IAgScenario scenario: Scenario object
+#Create new Coverage Definition and set the Bounds to an area target
+coverage = scenario.Children.New(7, 'MyCoverage')
+coverage.Grid.BoundsType = 0 # eBoundsCustomRegions
+covGrid = coverage.Grid
+bounds = covGrid.Bounds
+bounds.AreaTargets.Add('AreaTarget/MyAreaTarget')
+#Define the Grid Resolution
+Res = covGrid.Resolution
+Res.LatLon = .5   #deg
+#Set the satellite as the Asset
+coverage.AssetList.Add('Satellite/MySatellite')
+
+# Turn off Show Grid Points
+coverage.Graphics.Static.IsPointsVisible = False
+
+
+Set Advanced Settings for Coverage
+[Python]
+
+# IAgCoverageDefinition coverage: Coverage object
+advanced = coverage.Advanced
+advanced.AutoRecompute = False
+advanced.DataRetention = 0 # eAllData
+advanced.SaveMode = 2 # eSaveAccesses
+
+
+Extracting Elements from Data Providers with Groups
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+# IAgScenario scenario: Scenario object
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+satPosDP = satellite.DataProviders.Item('Cartesian Position').Group.Item('ICRF').Exec(scenario.StartTime,scenario.StopTime,60)
+satx = satPosDP.DataSets.GetDataSetByName('x').GetValues
+saty = satPosDP.DataSets.GetDataSetByName('y').GetValues
+satz = satPosDP.DataSets.GetDataSetByName('z').GetValues
+
+satVelDP = satellite.DataProviders.GetDataPrvTimeVarFromPath('Cartesian Velocity/ICRF').Exec(scenario.StartTime,scenario.StopTime,60)
+#There are 4 Methods to get DP From a Path depending on the kind of DP:
+#   GetDataPrvTimeVarFromPath
+#   GetDataPrvIntervalFromPath
+#   GetDataPrvInfoFromPath
+#   GetDataPrvFixedFromPath
+satvx = satVelDP.DataSets.GetDataSetByName('x').GetValues
+satvy = satVelDP.DataSets.GetDataSetByName('y').GetValues
+satvz = satVelDP.DataSets.GetDataSetByName('z').GetValues
+
+
+
+Extracting Elements from Data Providers with PreData
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgFacility facility: Facility object
+# IAgScenario scenario: Scenario object
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+facChooseDP = facility.DataProviders.Item('Points Choose System')
+dataProvCenter = facChooseDP.Group.Item('Center')
+#Choose the referense system you want to report the Center point in
+dataProvCenter.PreData = 'CentralBody/Earth TOD'
+rptElems = [ ['Time'],['x'],['y'],['z'] ]
+results = dataProvCenter.ExecElements(scenario.StartTime, scenario.StopTime, 60, rptElems)
+datasets = results.DataSets
+Time = datasets.GetDataSetByName('Time').GetValues
+facTODx = datasets.GetDataSetByName('x').GetValues
+facTODy = datasets.GetDataSetByName('y').GetValues
+facTODz = datasets.GetDataSetByName('z').GetValues
+
+
+Set the Coverage Interval to an object's availability Analysis interval
+[Python]
+
+# IAgSatellite satellite: Satellite object
+# IAgCoverageDefinition coverage: Coverage object
+satVGT = satellite.vgt
+AvailTimeSpan = satVGT.EventIntervals.Item('AvailabilityTimeSpan')
+IntResult = AvailTimeSpan.FindInterval()
+coverage.Interval.AnalysisInterval.SetStartAndStopTimes(IntResult.Interval.Start,IntResult.Interval.Stop)
+
+
+Getting Data for a Single Point in Time
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+satPassDP = satellite.DataProviders.Item('Precision Passes').ExecSingle(2600)
+pass =  satPassDP.DataSets.GetDataSetByName('Precision Pass Number').GetValues
+
+
+Getting Data for Specific Points and Elements
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+times = [ [0],[15000],[20000],[55000] ]
+elems = [ ['Time'],['Precision Pass Number'] ]
+satPassesDP = satellite.DataProviders.Item('Precision Passes').ExecSingleElementsArray(times,elems)
+passes = satPassesDP.GetArray(1)
+
+
+Using an interval Data Provider
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+# IAgFacility facility: Facility object
+
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+#Get the current scenario
+scenario = root.CurrentScenario
+#Set up the access object
+access = satellite.GetAccessToObject(facility)
+access.ComputeAccess()
+#Get the Access Data Provider
+accessDP = access.DataProviders.Item('Access Data').Exec(scenario.StartTime, scenario.StopTime)
+
+accessStartTimes = accessDP.DataSets.GetDataSetByName('Start Time').GetValues
+accessStopTimes = accessDP.DataSets.GetDataSetByName('Stop Time').GetValues
+
+
+Access Data Provider with groups
+[Python]
+
+# 
+ access_aer = satellite.GetAccessToObject(facility) 
+ access_aer.ComputeAccess() 
+ --- 
+#STARTTIME, STOPTIME, STEPSIZE is time-varying data and not interval data
+ dp=access_aer.DataProviders.Item('AER Data').Group.Item('Default').Exec(scenario.StartTime, scenario.StopTime, 60)
+--
+azimuth = dp.DataSets.GetDataSetByName('Azimuth').GetValues
+elevation = dp.DataSets.GetDataSetByName('Elevation').GetValues
+range = dp.DataSets.GetDataSetByName('Range').GetValues
+
+Using a Time Dependent Data Provider and requesting only specified elements
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+# IAgScenario scenario: Scenario object
+#Change DateFormat dimension to epoch seconds to make the data easier to handle in
+#Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+elems = [ ['Time'],['q1'],['q2'],['q3'],['q4'] ]
+satDP = satellite.DataProviders.Item('Attitude Quaternions').ExecElements(scenario.StartTime, scenario.StopTime, 60, elems)
+#Whenever you pass an index to an array, you need to cast it to a long
+#equivalent (int32)
+satTime = satDP.DataSets.Item(0).GetValues
+satq1 = satDP.DataSets.Item(1).GetValues
+satq2 = satDP.DataSets.Item(2).GetValues
+satq3 = satDP.DataSets.Item(3).GetValues
+satq4 = satDP.DataSets.Item(4).GetValues
+Add an AzEl Mask to a Facility
+[Python]
+
+# IAgFacility facility: Facility Object
+facility.SetAzElMask(1,0) # eTerrainData
+
+
+Create a facility (on the current scenario central body)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+facility = root.CurrentScenario.Children.New(8, 'MyFacility') # eFacility
+
+
+Set the geodetic position of the facility
+[Python]
+
+# IAgFacility facility: Facility Object
+facility.Position.AssignGeodetic(41.9849,21.4039,0) # Latitude, Longitude, Altitude
+
+# Set altitude to height of terrain
+facility.UseTerrain = True
+
+# Set altitude to a distance above the ground
+facility.HeightAboveGround = .05   # km
+
+
+Display the AzElMask in 2D/3D
+[Python]
+
+# IAgFacility facility: Facility Object
+azelMask = facility.Graphics.AzElMask
+azelMask.RangeVisible = True
+azelMask.NumberOfRangeSteps = 10
+azelMask.DisplayRangeMinimum = 0   # km
+azelMask.DisplayRangeMaximum = 100  # km
+azelMask.RangeColorVisible = True
+azelMask.RangeColor = 16776960 # cyan
+
+
+Configure the Contours of the FOM and define a color ramp
+[Python]
+
+# IAgCoverageDefinition coverage: Coverage object
+# IAgFigureOfMerit fom: Figure Of Merit object
+satisfaction = coverage.Graphics.Static
+satisfaction.IsRegionVisible = False
+Animation = fom.VO.Animation
+Animation.IsVisible = False
+VOcontours = fom.VO.Static
+VOcontours.IsVisible = True
+contours = fom.Graphics.Static.Contours
+contours.IsVisible = True
+contours.ContourType = 1 # eSmoothFill
+contours.ColorMethod = 0 # eColorRamp
+contours.LevelAttributes.RemoveAll()
+
+contours.LevelAttributes.AddLevelRange(590, 660, 10)   #Start, Start, Step
+contours.RampColor.StartColor = 255        #Red
+contours.RampColor.EndColor = 16711680     #Blue
+
+
+Create a new Figure of Merit of type Access Duration
+[Python]
+
+# IAgCoverageDefinition coverage: Coverage object
+fom = coverage.Children.New(25, 'AccessDuration') # eFigureOfMerit
+fom.SetDefinitionType(1) # eFmAccessDuration
+fom.Definition.SetComputeType(1) # eMaximum
+
+
+Add Array of Waypoints to Ground Vehicle and Interpolate over Terrain
+[Python]
+
+# IAgGroundVehicle grndVehicle: Ground Vehicle object
+route = grndVehicle.Route
+ptsArray = [ [41.97766217,21.44863761,0,0.026,.5],[41.97422351,21.39956154,0,0.026,.5],[41.99173299,21.40796942,0,0.026,.5] ]
+route.SetPointsSmoothRateAndPropagate(ptsArray)
+route.SetAltitudeRefType(1) # eWayPtAltRefTerrain
+route.AltitudeRef.Granularity = .001
+route.altitudeRef.InterpMethod = 1 # eWayPtTerrainHeight
+#Propagate the route
+route.Propagate()
+
+
+Create a New Ground Vehicle (on the current scenario central body)
+[Python]
+
+# IAgScenario scenario: Scenario object
+grndVehicle = scenario.Children.New(9,'MyVehicle') # eGroundVehicle
+grndVehicle.SetRouteType(9) # ePropagatorGreatArc
+
+
+Set Great Arc Propagator and Add Individual Waypoints to Ground Vehicle
+[Python]
+
+# IAgGroundVehicle grndVehicle: Ground Vehicle object
+# Set route to great arc, method and altitude reference
+grndVehicle.SetRouteType(9) # ePropagatorGreatArc
+route = grndVehicle.Route
+route.Method = 0 # eDetermineTimeAccFromVel
+route.SetAltitudeRefType(2) # eWayPtAltRefWGS84
+# Add first point
+waypoint = route.Waypoints.Add()
+waypoint.Latitude = 56.18
+waypoint.Longitude = 40.91
+waypoint.Altitude = 0  # km
+waypoint.Speed = .026    # km/sec
+# Add second point
+waypoint2 = route.Waypoints.Add()
+waypoint2.Latitude = 50.22
+waypoint2.Longitude = 11.05
+waypoint2.Altitude = 0 # km
+waypoint2.Speed = .026    # km/sec
+#Propagate the route
+route.Propagate()
+
+
+Create a New LineTarget (on the current scenario central body)
+[Python]
+
+#IAgScenario scenario: Scenario object
+lineTarget = scenario.Children.New(11,'MyLineTarget') # eLineTarget
+point1 = lineTarget.Points.Add(34.72, -118.34)
+point2 = lineTarget.Points.Add(30.83, -82.67)
+
+
+Create a New Missile (on the current scenario central body)
+[Python]
+
+# IAgScenario scenario: Scenario object
+missile = scenario.Children.New(13,'MyMissile') # eMissile
+missile.SetTrajectoryType(10) # ePropagatorBallistic
+trajectory = missile.Trajectory
+trajectory.StartTime = 0
+trajectory.Launch.Lat = 29
+trajectory.Launch.Lon = -81
+trajectory.ImpactLocation.Impact.Lat = 27
+trajectory.ImpactLocation.Impact.Lon = -43
+trajectory.ImpactLocation.SetLaunchControlType(0) # eLaunchControlFixedApogeeAlt
+trajectory.impactLocation.LaunchControl.ApogeeAlt = 1200   # km
+trajectory.Propagate()
+
+
+Create a New MTO (on the current scenario central body)
+[Python]
+
+# IAgScenario scenario: Scenario object
+mto = scenario.Children.New(12,'MyMTO') # eMTO
+mtoTimes = [ [0],[7200] ]
+mtoLats = [ [36.77],[34.80] ]
+mtoLons = [ [-77.25],[-78.37] ]
+mtoAlts = [ [5],[5] ]
+
+track1 = mto.Tracks.AddTrack(1,mtoTimes,mtoLats,mtoLons,mtoAlts)
+track1.Interpolate = True
+# Change the color of the track
+mto.Graphics.Tracks.GetTrackFromId(1).Color = 255
+
+
+Load MTO track points from file
+[Python]
+
+# LoadPoints expects the path an Ephemeris file path
+# IAgMto mto: MTO Object
+track2 = mto.Tracks.Add(2)
+track2.Points.LoadPoints(r'C:\Program Files\AGI\STK_ODTK 13\STK\Help\stktraining\text\EphemerisLLATimePosVel_Example.e')
+track2.Interpolate = True
+
+
+Compute Object Coverage
+[Python]
+
+# IAgAircraft aircraft: Aircraft object
+objCoverage = aircraft.ObjectCoverage
+objCoverage.Assets.RemoveAll
+objCoverage.Assets.Add('Satellite/MySatellite')
+objCoverage.UseObjectTimes = True
+objCoverage.Compute()
+
+objCoverageFOM = objCoverage.FOM
+objCoverageFOM.SetDefinitionType(3) # eFmCoverageTime
+objCoverageFOM.Definition.SetComputeType(16) # eTotal
+
+
+Create a New Planet
+[Python]
+
+# IAgScenario scenario: Scenario object
+planet = scenario.Children.New(15,'Mars') # ePlanet
+planet.CommonTasks.SetPositionSourceCentralBody('Mars',4) # eEphemJPLDE
+
+
+Modify Planet 2D Properties
+[Python]
+
+# IAgPlanet planet: Planet object
+planet2D = planet.Graphics
+planet2D.Color = 255   # Red
+planet2D.Inherit = False
+planet2D.OrbitVisible = True
+planet2D.SubPlanetPointVisible = False
+planet2D.SubPlanetLabelVisible = False
+
+
+Create a satellite (on the current scenario central body)
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+satellite = root.CurrentScenario.Children.New(18, 'MySatellite') # eSatellite
+
+
+Export an ephemeris file to scenario folder
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgSatellite satellite: Satellite object
+scenPath = root.ExecuteCommand('GetDirectory / Scenario').Item(0)
+satelliteFilePath = '#s\#s.e' # (scenPath,satellite.InstanceName)
+satelliteFilePath = satelliteFilePath.replace("\\", "\\\\")
+satellite.ExportTools.GetEphemerisStkExportTool().Export(satelliteFilePath)
+
+
+Set initial state of satellite and propagate
+[Python]
+
+# IAgSatellite satellite: Satellite object
+keplerian = satellite.Propagator.InitialState.Representation.ConvertTo(1) # eOrbitStateClassical, Use the Classical Element interface
+keplerian.SizeShapeType = 0  # eSizeShapeAltitude, Changes from Ecc/Inc to Perigee/Apogee Altitude
+keplerian.LocationType = 5 # eLocationTrueAnomaly, Makes sure True Anomaly is being used
+keplerian.Orientation.AscNodeType = 0 # eAscNodeLAN, Use LAN instead of RAAN for data entry
+
+# Assign the perigee and apogee altitude values:
+keplerian.SizeShape.PerigeeAltitude = 500      # km
+keplerian.SizeShape.ApogeeAltitude = 600       # km
+
+# Assign the other desired orbital parameters:
+keplerian.Orientation.Inclination = 90         # deg
+keplerian.Orientation.ArgOfPerigee = 12        # deg
+keplerian.Orientation.AscNode.Value = 24       # deg
+keplerian.Location.Value = 180                 # deg
+
+# Apply the changes made to the satellite's state and propagate:
+satellite.Propagator.InitialState.Representation.Assign(keplerian)
+satellite.Propagator.Propagate()
+
+
+Set satellite attitude basic spinning
+[Python]
+
+# IAgSatellite satellite: Satellite object
+basic = satellite.Attitude.Basic
+basic.SetProfileType(16) # eProfileSpinning
+basic.Profile.Body.AssignXYZ(0,0,1)
+basic.Profile.Inertial.AssignXYZ(0,1,0)
+basic.Profile.Rate = 6  # rev/sec
+
+
+Set satellite attitude external
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.Attitude.External.Load(r'C:\Program Files\AGI\STK_ODTK 13\STK\Help\stktraining\text\AttitudeTimeEulerAngles_Example.a')
+
+
+Set satellite attitude targeting
+[Python]
+
+# IAgSatellite satellite: Satellite object
+attitudePointing = satellite.Attitude.Pointing
+attitudePointing.UseTargetPointing = 1
+attitudePointing.Targets.RemoveAll()
+attitudePointing.Targets.Add('AreaTarget/MyAreaTarget')
+attitudePointing.TargetTimes.UseAccessTimes = True
+
+
+Set satellite propagator to Astrogator and clear segments
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.SetPropagatorType(12) # ePropagatorAstrogator
+driver = satellite.Propagator
+#Clear all segments from the MCS
+driver.MainSequence.RemoveAll()
+
+
+Set satellite propagator to HPOP and set force model properties
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.SetPropagatorType(0) # ePropagatorHPOP
+satellite.Propagator.Step = 60
+satellite.Propagator.InitialState.Representation.AssignCartesian(2,6406.92,-1787.59,-506.422,2.10185,6.48871,3.64041) # eCoordinateSystemFixed
+
+forceModel = satellite.Propagator.ForceModel
+forceModel.CentralBodyGravity.File = r'C:\Program Files\AGI\STK_ODTK 13\STK\STKData\CentralBodies\Earth\WGS84_EGM96.grv'
+forceModel.CentralBodyGravity.MaxDegree = 21
+forceModel.CentralBodyGravity.MaxOrder = 21
+forceModel.Drag.Use=1
+forceModel.Drag.DragModel.Cd=0.01
+forceModel.Drag.DragModel.AreaMassRatio=0.01
+forceModel.SolarRadiationPressure.Use=0
+
+integrator = satellite.Propagator.Integrator
+integrator.DoNotPropagateBelowAlt=-1e6
+integrator.IntegrationModel=3
+integrator.StepSizeControl.Method=1
+integrator.StepSizeControl.ErrorTolerance=1e-13
+integrator.StepSizeControl.MinStepSize=0.1
+integrator.StepSizeControl.MaxStepSize=30
+integrator.Interpolation.Method=1
+integrator.Interpolation.Order=7
+
+satellite.Propagator.Propagate()
+
+
+Set satellite propagator to J4 and assign cartesian position
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.SetPropagatorType(2) # ePropagatorJ4Perturbation
+propagator = satellite.Propagator
+propagator.InitialState.Representation.AssignCartesian(11,6678.14,0,0,0,6.78953,3.68641) # eCoordinateSystemICRF
+propagator.Propagate()
+
+
+Set satellite propagator to SGP4 and propagate
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.SetPropagatorType(4) # ePropagatorSGP4
+propagator = satellite.Propagator
+propagator.UseScenarioAnalysisTime
+propagator.CommonTasks.AddSegsFromOnlineSource('25544') # International Space Station
+propagator.AutoUpdateEnabled = True
+propagator.Propagate()
+
+
+Set satellite propagator to SPICE and propagate
+[Python]
+
+# IAgSatellite satellite: Satellite object
+# IAgStkObjectRoot root: STK Object Model Root
+satellite.SetPropagatorType(5) # ePropagatorSPICE
+propagator = satellite.propagator
+propagator.Spice = r'C:\Program Files\AGI\STK_ODTK 13\STK\STKData\Spice\planets.bsp'   # Make sure this is a valid path
+propagator.BodyName = 'MARS'
+
+propagator.StartTime = root.CurrentScenario.StartTime  # Set to scenario start time
+propagator.StopTime = root.CurrentScenario.StopTime#    # Set to scenario stop time
+propagator.Step = 60.0
+propagator.Propagate()
+
+
+Run the Astrogator MCS
+[Python]
+
+# IAgVADriverMCS driver: MCS driver interface
+driver.RunMCS()
+
+
+Add a Data Display to the 3D Window
+[Python]
+
+# IAgSatellite satellite: Satellite object
+#Remove all data displays so you can easily pick one that may already be in
+#the list
+satellite.VO.DataDisplay.RemoveAll()
+#Add LLA data display and change size/title
+datadisplay = satellite.VO.DataDisplay.Add('LLA Position')
+datadisplay.IsVisible = True
+datadisplay.FontSize = 1 # eMedium
+datadisplay.TitleText = 'My Data Display'
+datadisplay.IsShowNameEnabled = False
+
+
+Add a Vector to display in 3D
+[Python]
+
+# IAgSatellite satellite: Satellite object
+vector = satellite.VO.Vector
+angVel = vector.RefCrdns.Add(0, 'Satellite/MySatellite AngVelocity')
+angVel.LabelVisible = True
+
+
+Add Fixed System Orbit System in 3D Display
+[Python]
+
+# IAgSatellite satellite: Satellite object
+orbitsystems = satellite.VO.OrbitSystems
+orbitsystems.FixedByWindow.IsVisible = True
+orbitsystems.FixedByWindow.Inherit = False
+orbitsystems.FixedByWindow.Color = 65535   #yellow
+
+
+Change the 3D Model and marker properties
+[Python]
+
+# IAgSatellite satellite: Satellite object
+model = satellite.VO.Model
+model.ModelData.Filename = 'STKData\VO\Models\Space\dsp.mdl'
+orbitmarker = model.OrbitMarker
+orbitmarker.SetMarkerImageFile(r'C:\Program Files\AGI\STK_ODTK 13\STK\STKData\VO\Markers\Satellite.ppm')
+orbitmarker.MarkerData.IsTransparent = True
+orbitmarker.PixelSize = 18
+orbitmarker.OrientationMode = 2 # eVOMarkerOrientationFollowDirection
+
+
+Change the Display Label of the vehicle
+[Python]
+
+# IAgSatellite satellite: Satellite object
+satellite.Graphics.UseInstNameLabel = False
+satellite.Graphics.LabelName = 'Python Satellite'
+
+
+Change the graphics resolution of the orbit for a smooth path
+[Python]
+
+# IAgSatellite satellite: Satellite object
+resolution = satellite.Graphics.Resolution
+resolution.Orbit = 60
+
+
+Display droplines in 3D Window
+[Python]
+
+# IAgSatellite satellite: Satellite object
+orbitDroplines = satellite.VO.DropLines.Orbit
+wgs84 = orbitDroplines.Item(0) #   Droplines to WGS84 surface
+wgs84.IsVisible = True
+wgs84.LineWidth = 1
+wgs84.Use2DColor = False
+wgs84.Color = 255  #red
+
+
+Modify the Detail Thresholds Levels
+[Python]
+
+# IAgSatellite satellite: Satellite object
+details = satellite.VO.Model.DetailThreshold
+details.EnableDetailThreshold = True
+details.All = 1    #   km
+details.ModelLabel = 2 #   km
+details.MarkerLabel = 40000    #   km
+details.Marker = 500000   #   km
+details.Point = 500000 #   km
+
+
+Set 2D Display times to Custom and add intervals
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+graphics = satellite.Graphics
+graphics.SetAttributesType(2) # eAttributesCustom
+graphics.Attributes.Default.IsVisible = False
+
+interval1 = graphics.Attributes.Intervals.Add(0,3600)
+interval1.GfxAttributes.IsVisible = True
+interval1.GfxAttributes.Inherit = False
+interval1.GfxAttributes.Line.Width = 1
+interval1.GfxAttributes.Line.Style = 16 # eLongDash
+interval1.GfxAttributes.Color = 16711935
+interval1.GfxAttributes.MarkerStyle = 'X'
+
+interval2 = satellite.Graphics.Attributes.Intervals.Add(7200,86400)
+interval2.GfxAttributes.IsVisible = True
+interval2.GfxAttributes.Inherit = False
+interval2.GfxAttributes.Line.Width = 1
+interval2.GfxAttributes.Line.Style = 1 # eDashed
+interval2.GfxAttributes.Color = 65280
+interval2.GfxAttributes.MarkerStyle = 'Point'
+
+
+Set 2D Graphics display properties
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+# IAgSatellite satellite: Satellite object
+#Change the line width, style, color and marker
+
+graphics = satellite.Graphics
+graphics.SetAttributesType(1) # eAttributesBasic
+attributes = graphics.Attributes
+attributes.Inherit = False
+attributes.Line.Width = 3
+attributes.Line.Style = 16 # eLongDash
+attributes.Color = 65280
+attributes.MarkerStyle = r'C:\Program Files\AGI\STK_ODTK 13\STK\STKData\Pixmaps\MarkersWin\m010Satellite.bmp'
+
+
+Set 2D Swath
+[Python]
+
+# IAgSatellite satellite: Satellite object
+#Set swath in the 2D properties
+swath = satellite.Graphics.Swath
+swath.SetElevationType(0) # eElevationGroundElevation
+swath.Elevation.Angle = 30  # deg
+satellite.Graphics.Swath.Options = 0 # eOptionsEdgeLimits
+
+
+Set 2D/3D Elevation Contours
+[Python]
+
+# IAgSatellite satellite: Satellite object
+#Set the contours in the 2D properties
+contours = satellite.Graphics.ElevContours
+contours.IsVisible = True
+contours.NumOfDecimalDigits = 0
+contours.Elevations.AddLevelRange(0,90,10) #   Min, Max, Step
+#Turn the contours on in the 3D properties
+satellite.VO.ElevContours.IsVisible = True
+
+
+Set 2D/3D Pass Display Properties
+[Python]
+
+# IAgSatellite satellite: Satellite object
+#Display one pass for ground track and orbit on 2D
+passdata = satellite.Graphics.PassData
+groundTrack = passdata.GroundTrack
+groundTrack.SetLeadDataType(5) # eDataOnePass
+groundTrack.SetTrailSameAsLead
+orbit = passdata.Orbit
+orbit.SetLeadDataType(5) # eDataOnePass
+orbit.SetTrailSameAsLead
+#Display one orbit pass and no ground track on 3D
+passdata3D = satellite.VO.Pass.TrackData.PassData
+groundTrack3D = passdata3D.GroundTrack
+groundTrack3D.SetLeadDataType(0) # eDataNone
+groundTrack3D.SetTrailSameAsLead
+orbit3D = passdata3D.Orbit
+orbit3D.SetLeadDataType(5) # eDataOnePass
+orbit3D.SetTrailSameAsLead
+
+
+Set 2D/3D Range Contours
+[Python]
+
+# IAgSatellite satellite: Satellite object
+#Set a contour level in the 2D properties
+rangeContours = satellite.Graphics.RangeContours
+rangeContours.IsVisible = True
+rangeLevel = rangeContours.LevelAttributes.AddLevel(2000)  # km
+rangeLevel.Color = 16711935
+rangeLevel.LineWidth = 4
+rangeLevel.LabelAngle = 90
+rangeLevel.UserTextVisible = True
+rangeLevel.UserText = 'Range'
+#Turn the contours on in the 3D properties
+satellite.VO.RangeContours.IsVisible = True
+
+
+Set Vehicle Lighting Properties
+[Python]
+
+# IAgSatellite satellite: Satellite object
+lighting = satellite.Graphics.Lighting
+#Settings for vehicle in sunlight
+sunlight = lighting.Sunlight
+sunlight.Visible = True
+sunlight.Color = 65535 #yellow
+sunlight.LineWidth = 3
+#Settings for vehicle in penumbra
+penumbra = lighting.Penumbra
+penumbra.Visible = True
+penumbra.Color = 42495 #orange
+penumbra.LineWidth = 2
+#Settings for vehicle in umbra
+umbra = lighting.Umbra
+umbra.Visible = True
+umbra.Color = 255  #red
+umbra.LineWidth = 1
+
+
+Attach a Sensor Object to a Vehicle
+[Python]
+
+# IAgSatellite satellite: Satellite object
+sensor = satellite.Children.New(20,'MySensor') # eSensor
+
+
+Sensor Body Mask
+[Python]
+
+# IAgSensor sensor: Sensor object
+sensor.SetAzElMaskFile(r'C:\Program Files\AGI\STK_ODTK 13\STK\Help\stktraining\text\BodyMask_hga.bmsk')
+
+
+Set Sensor Properties
+[Python]
+
+# IAgSensor sensor: Sensor object
+# Change pattern and set
+sensor.CommonTasks.SetPatternRectangular(20,25)
+# Change pointing and set
+sensor.CommonTasks.SetPointingFixedAzEl(90,60,1) # eAzElAboutBoresightRotate
+# Change location and set
+sensor.SetLocationType(0) # eSnFixed
+sensor.LocationData.AssignCartesian(-.0004,-.0004,.004)
+
+
+Sensor Persistence
+[Python]
+
+# IAgSensor sensor: Sensor object
+projection = sensor.Graphics.Projection
+projection.Persistence = 7200  # sec
+projection.ForwardPersistence = True
+projection.FillPersistence = True
+sensor.Graphics.FillVisible = True
+sensor.Graphics.PercentTranslucency = 50
+
+
+Execute Connect command
+[Python]
+
+root.ExecuteCommand('New / */Target MyTarget')
+
+
+Execute multiple Connect commands
+[Python]
+
+commandList = [ ['New / */Place MyPlace'],['SetPosition */Place/MyPlace Geodetic 37.9 -75.5 0.0'] ]
+root.ExecuteMultipleCommands(commandList,2) # eExceptionOnError
+
+
+Extract data from Connect result
+[Python]
+
+result = root.ExecuteCommand('Report_RM */Place/MyPlace Style "Cartesian Position"')
+
+for i in range(0,result.Count):
+    cmdRes = result.Item(i)
+    print(cmdRes)
+
+
+Change camera reference frame
+[Python]
+
+# IAgScenario scenario: Scenario object
+# IAgStkObjectRoot root: STK Object Model Root
+manager = scenario.SceneManager
+manager.Scenes.Item(0).Camera.ViewCentralBody('Earth', root.CentralBodies.Earth.Vgt.Axes.Item('Fixed'))
+manager.Render()
+
+
+Change camera view to Imagery Extents
+[Python]
+
+# IAgScenario scenario: Scenario object
+# IAgStkGraphicsAGIProcessedImageGlobeOverlay imageryTile: Image Overlay object
+manager = scenario.SceneManager
+extent = imageryTile.Extent
+# Change extent in the default 3D window
+manager.Scenes.Item(0).Camera.ViewExtent('Earth', extent)
+manager.Render()
+
+
+Add Imagery and Terrain to the Scene
+[Python]
+
+# IAgScenario scenario: Scenario object
+# Retrieve the boundaries of the imported files
+manager = scenario.SceneManager
+# Add Terrain
+terrainTile = manager.Scenes.Item(0).CentralBodies.Earth.Terrain.AddUriString(r'C:\Program Files\AGI\STK_ODTK 13\STK\Help\stktraining\samples\SRTM_Skopje.pdtt')
+extentTerrain = terrainTile.Extent
+print('Terrain boundaries: LatMin: #s LatMax: #s LonMin: #s LonMax: #s' # (str(extentTerrain[0]),str(extentTerrain[2]),str(extentTerrain[1]) ,str(extentTerrain[3])))
+# Add Imagery
+imageryTile = manager.Scenes.Item(0).CentralBodies.Earth.Imagery.AddUriString(r'C:\Program Files\AGI\STK_ODTK 13\STK\Help\stktraining\imagery\NPS_OrganPipeCactus_Map.pdttx')
+extentImagery = imageryTile.Extent
+print('Imagery boundaries: LatMin: #s LatMax: #s LonMin: #s LonMax: #s' # (str(extentImagery[0]),str(extentImagery[2]),str(extentImagery[1]),str(extentImagery[3])))
+
+
+Control Display of Stars and Water Texture
+[Python]
+
+# IAgScenario scenario: Scenario object
+# Turn off the stars and water texture
+manager = scenario.SceneManager
+manager.Scenes.Item(0).ShowStars = False
+manager.Scenes.Item(0).ShowWaterSurface = False
+
+
+Control the Lighting of the 3D scene
+[Python]
+
+# IAgScenario scenario: Scenario object
+# Modify the lighting levels
+manager = scenario.SceneManager
+lighting = manager.Scenes.Item(0).Lighting
+lighting.AmbientIntensity = .20    #Percent
+lighting.DiffuseIntensity = 4  #Percent
+lighting.NightLightsIntensity = 5  #Percent
+
+
+Create a Bounding Sphere
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+sphere = manager.Initializers.BoundingSphere.Initialize([ [-1061.22],[-5773.98],[4456.04] ],100)
+
+
+Display a Primitive During an Interval
+[Python]
+
+# IAgScenario scenario: Scenario object
+# IAgStkGraphicsModelPrimitive model: Graphics Primitive
+manager = scenario.SceneManager
+composite = manager.Initializers.CompositeDisplayCondition.Initialize()
+start = root.ConversionUtility.NewDate('EpSec', str(scenario.StartTime))
+stop = root.ConversionUtility.NewDate('EpSec', str(scenario.StartTime + 600))
+timeInterval = manager.Initializers.TimeIntervalDisplayCondition.InitializeWithTimes(start, stop)
+composite.Add(timeInterval)
+model.DisplayCondition = composite
+
+
+Draw a new Surface Extent Triangulator
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+texture = manager.Textures.LoadFromStringUri(r'C:\Program Files\AGI\STK ODTK 13\STK\CodeSamples\CustomApplications\Data\HowTo\Textures\agi_logo_transparent.png')
+mesh = manager.Initializers.SurfaceMeshPrimitive.Initialize()
+mesh.Texture = texture
+mesh.Translucency = 0
+cartographicExtent = [ [-55],[10],[-24],[30] ]
+
+triangles = manager.Initializers.SurfaceExtentTriangulator.ComputeSimple('Earth', cartographicExtent)
+mesh.Set(triangles)
+mesh.Translucency = .25
+c0 = [ [10],[-55] ]
+c1 = [ [30],[-55] ]
+c2 = [ [30],[-24] ]
+c3 = [ [10],[-24] ]
+
+mesh.TextureMatrix = manager.Initializers.TextureMatrix.InitializeWithRectangles(c0,c1,c2,c3)
+mesh.TransparentTextureBorder = True
+manager.Primitives.Add(mesh)
+manager.Render()
+
+
+Draw a new Surface Mesh
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+cartesianPts = [ [6030.721052],[1956.627139],[-692.397578],[5568.375825],[2993.600713],[-841.076362],[5680.743568],[2490.379622],[-1480.882721] ]  # X,Y,Z (km)
+
+triangles = manager.Initializers.SurfacePolygonTriangulator.Compute('Earth',cartesianPts)
+surfaceMesh = manager.Initializers.SurfaceMeshPrimitive.Initialize()
+surfaceMesh.Color = 255    # red
+surfaceMesh.Set(triangles)
+manager.Primitives.Add(surfaceMesh)
+manager.Render()
+
+
+Draw a new Text Primitive
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+font = manager.Initializers.GraphicsFont.InitializeWithNameSizeFontStyleOutline('MS Sans Serif', 24, 1, True) # eStkGraphicsFontStyleBold
+textBatch = manager.Initializers.TextBatchPrimitive.InitializeWithGraphicsFont(font)
+textBatch.SetCartographic('Earth', [ [0],[0],[0] ],['Example Text'])  # Lat,Lon,Alt
+manager.Primitives.Add(textBatch)
+
+
+Draw a new Texture Screen Overlay
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+overlays = manager.ScreenOverlays.Overlays
+textureOverlay = manager.Initializers.TextureScreenOverlay.InitializeWithXYWidthHeight(0,0,128,128)
+textureOverlay.Texture = manager.Textures.LoadFromStringUri(r'C:\Program Files\AGI\STK_ODTK 13\STK\STKData\VO\Textures\AGI_logo_big.ppm')
+textureOverlay.MaintainAspectRatio = True
+textureOverlay.Origin = 6 # eStkGraphicsScreenOverlayOriginTopLeft
+textureOverlay.Position = [ [0],[20],[0],[0] ] # eStkGraphicsScreenOverlayUnitPixels
+overlays.Add(textureOverlay)
+#Render the Scene
+manager.Render()
+
+
+Draw a Point Primitive and set properties
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+point = manager.Initializers.PointBatchPrimitive.Initialize()
+ptPosition = [ [0],[-1],[0] ]  #Lat,Lon,Alt
+
+point.SetCartographic('Earth',ptPosition)
+point.PixelSize = 15
+point.Color = 65280
+point.DisplayOutline = True
+point.OutlineWidth = 5
+point.OutlineColor = 255
+
+manager.Primitives.Add(point)
+#Render the Scene
+manager.Render()
+
+
+Draw a Solid Box Primitive and set properties
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+originBox = root.ConversionUtility.NewPositionOnEarth()
+originBox.AssignGeodetic(0, 3, 100)
+
+orientBox = root.ConversionUtility.NewOrientation()
+orientBox.AssignAzEl(0,0,1) # eAzElAboutBoresightRotate
+
+size = [ [100],[100],[200] ]
+result = manager.Initializers.BoxTriangulator.Compute(size)
+solidBox = manager.Initializers.SolidPrimitive.Initialize()
+solidBox.ReferenceFrame = root.CentralBodies.Earth.Vgt.Systems.Item('Fixed')
+solidBox.Position = originBox.QueryCartesianArray()
+solidBox.SetWithResult(result)
+solidBox.Color = 255
+solidBox.OutlineColor = 16776974
+solidBox.Translucency = .75
+solidBox.Rotation = orientBox
+manager.Primitives.Add(solidBox)
+manager.Render()
+
+
+Draw a Solid Cylinder Primitive and set properties
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+originCylinder = root.ConversionUtility.NewPositionOnEarth()
+originCylinder.AssignGeodetic(0, 7, 100)
+
+orientCylinder = root.ConversionUtility.NewOrientation()
+orientCylinder.AssignAzEl(0,0,1) # eAzElAboutBoresightRotate
+
+cylinder = manager.Initializers.CylinderTriangulator.CreateSimple(200,100)
+solidCylinder = manager.Initializers.SolidPrimitive.Initialize()
+solidCylinder.ReferenceFrame = root.CentralBodies.Earth.Vgt.Systems.Item('Fixed')
+solidCylinder.Position = originCylinder.QueryCartesianArray()
+solidCylinder.SetWithResult(cylinder)
+solidCylinder.Color = 65280
+solidCylinder.OutlineColor = 16711680
+solidCylinder.OutlineWidth = 3
+solidCylinder.Translucency = .75
+solidCylinder.Rotation = orientCylinder
+manager.Primitives.Add(solidCylinder)
+manager.Render()
+
+
+Draw a Solid Ellipsoid Primitive and set properties
+[Python]
+
+# IAgScenario scenario: Scenario object
+manager = scenario.SceneManager
+originEllipsoid = root.ConversionUtility.NewPositionOnEarth()
+originEllipsoid.AssignGeodetic(0, 5, 100)
+
+orientEllipsoid = root.ConversionUtility.NewOrientation()
+orientEllipsoid.AssignAzEl(0,0,1) # eAzElAboutBoresightRotate
+
+radii = [ [200],[100],[100] ]
+ellipsoid = manager.Initializers.EllipsoidTriangulator.ComputeSimple(radii)
+solidEllipsoid = manager.Initializers.SolidPrimitive.Initialize()
+solidEllipsoid.ReferenceFrame = root.CentralBodies.Earth.Vgt.Systems.Item('Fixed') #vgtSat.Systems.Item('Body')
+solidEllipsoid.Position = originEllipsoid.QueryCartesianArray()
+solidEllipsoid.SetWithResult(ellipsoid)
+solidEllipsoid.Color = 16777215
+solidEllipsoid.OutlineColor = 15863551
+solidEllipsoid.Translucency = .75
+solidEllipsoid.Rotation = orientEllipsoid
+manager.Primitives.Add(solidEllipsoid)
+manager.Render()
+
+
+GreatArcInterpolator Primitives
+[Python]
+
+# IAgScenario scenario: Scenario object
+# Create a array of LLA values and interoplate them over the specified
+# central body
+positionArray = [ [35.017],[-118.540],[0],[44.570],[-96.474],[ 0],[ 31.101],[-82.619],[0] ]
+manager = scenario.SceneManager
+# Interpolate points over great arc
+interpolator = manager.Initializers.GreatArcInterpolator.InitializeWithCentralBody('Earth')
+interpolator.Granularity = .1
+result = interpolator.Interpolate(positionArray)
+
+
+Create a Data Element Scalar
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+calcFactory = vgtSat.CalcScalars.Factory
+trueAnom = calcFactory.Create('TrueAnomaly','',3) # eCrdnCalcScalarTypeDataElement
+trueAnom.SetWithGroup('Classical Elements','ICRF','True Anomaly')
+
+
+Create a new Aligned and Constrained Axes
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnVectorDisplacement Sat2EarthCenter: vector component
+# IAgCrdnVectorFixedInAxes bodyYSat: vector component
+AxesFactory = vgtSat.Axes.Factory
+AlignConstain = AxesFactory.Create('AlignConstrain','Aligned to displacement vector and constrained to Body Y',7) # eCrdnAxesTypeAlignedAndConstrained
+AlignConstain.AlignmentReferenceVector.SetVector(Sat2EarthCenter)
+AlignConstain.AlignmentDirection.AssignXYZ(1,0,0)
+AlignConstain.ConstraintReferenceVector.SetVector(bodyYSat)
+AlignConstain.constraintDirection.AssignXYZ(0,0,1)
+
+
+Create a new Assembled System
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnPointFixedInSystem fixedPt: point component
+# IAgCrdnAxes bodyAxes: axes component
+SysFactory = vgtSat.Systems.Factory
+assemSys = SysFactory.Create('FixedPtSystem','System with origin at the new point',0) # eCrdnSystemTypeAssembled
+assemSys.OriginPoint.SetPoint(fixedPt)
+assemSys.ReferenceAxes.SetAxes(bodyAxes)
+
+
+Create a new Attitude Parameter Set
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnAxes bodyAxes: axes component
+# IAgCrdnAxes icrfAxes: axes component
+paraFactory = vgtSat.ParameterSets.Factory
+paraSet = paraFactory.Create('attitudeICRF','Attitude Set',0) # eCrdnParameterSetTypeAttitude
+paraSet.Axes = bodyAxes
+paraSet.ReferenceAxes = icrfAxes
+
+
+Create a new Between Vectors Angle
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnVectorDisplacement Sat2EarthCenter: vector component
+3 IAgCrdnVectorFixedInAxes bodyYSat: vector component
+AngFactory = vgtSat.Angles.Factory
+betwVect = AngFactory.Create('SatEarth2Y','Displacement Vector to Sat Body Y',0) # eCrdnAngleTypeBetweenVectors
+betwVect.FromVector.SetVector(Sat2EarthCenter)
+betwVect.ToVector.SetVector(bodyYSat)
+
+
+Create a new Collection of Interval List
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnPoint centerPtSat: point component
+timeCollListFactory = vgtSat.EventIntervalCollections.Factory
+timeColl = timeCollListFactory.CreateEventIntervalCollectionLighting('LightingList','Collection of lighting intervals')
+timeColl.UseObjectEclipsingBodies = True
+timeColl.Location = centerPtSat
+
+
+Create a new Cross Product Vector
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnVectorDisplacement Sat2EarthCenter: vector component
+# IAgCrdnVectorDisplacement fixedAxesVector: vector component
+VectFactory = vgtSat.Vectors.Factory
+lineOfNodesVector = VectFactory.CreateCrossProductVector('CrossProduct',Sat2EarthCenter,fixedAxesVector)
+
+
+Create a new Custom Script Vector
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+VectFactory = vgtSat.Vectors.Factory
+customScript = VectFactory.Create('Script','Description',6) # eCrdnVectorTypeCustomScript
+# Initialization script if needed
+# customScript.InitializationScriptFile = ''
+customScript.ScriptFile = r'C:\Program Files\AGI\STK_ODTK 13\STK\CodeSamples\Extend\PluginScripts\VB_CustomVector.vbs'
+if customScript.IsValid == False:
+    print('Script component not valid!')
+    print('Copy vbs file from C:\Program Files\AGI\STK_ODTK 13\STK\CodeSamples\Extend\PluginScripts\VB_CustomVector.vbs to C:\Users\#s\Documents\STK 13\Config\Scripting\VectorTool' #  getenv('USERNAME'))
+
+
+
+Create a new Displacement Vector
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnPoint centerPtSat: point component
+# IAgCrdnPoint centerPtEarth: point component
+VectFactory = vgtSat.Vectors.Factory
+Sat2EarthCenter = VectFactory.CreateDisplacementVector('Sat2EarthCenter',centerPtSat,centerPtEarth)
+
+
+Create a new Fixed at Time Instant Point
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnSystemAssembled icrf: system component
+PtFactory = vgtSat.Points.Factory
+timeInstantPt = PtFactory.Create('AtTimePt','Point at time instant',13) # eCrdnPointTypeAtTimeInstant
+timeInstantPt.SourcePoint = vgtSat.Points.Item('Center')
+timeInstantPt.ReferenceSystem = icrf
+timeInstantPt.ReferenceTimeInstant = vgtSat.Events.Item('AvailabilityStartTime')
+
+
+Create a new Fixed in Axes Vector
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnAxes bodyAxes: axes component
+VectFactory = vgtSat.Vectors.Factory
+fixedAxesVector = VectFactory.Create('FixedInAxes','',10) # eCrdnVectorTypeFixedInAxes'
+fixedAxesVector.ReferenceAxes.SetAxes(bodyAxes)
+fixedAxesVector.Direction.AssignXYZ(0,0,1)
+
+
+Create a new Fixed in System Point
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+PtFactory = vgtSat.Points.Factory
+fixedPt = PtFactory.Create('FixedPt','Point offest from Center',4) # 'eCrdnPointTypeFixedInSystem
+fixedPt.FixedPoint.AssignCartesian(.005,0,.005)
+
+
+Create a new Model Attachment Point
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+PtFactory = vgtSat.Points.Factory
+modelPt = PtFactory.Create('ModelPt','Attach point defined in model',7) # eCrdnPointTypeModelAttachment
+modelPt.PointableElementName = 'MainSensor-000000'
+
+
+Create a new Orbit Parameter Set
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+paraFactory = vgtSat.ParameterSets.Factory
+paraSetOribit = paraFactory.Create('orbitSun','Orbit',3) # eCrdnParameterSetTypeOrbit
+paraSetOribit.OrbitingPoint = vgtSat.Points.Item('Center')
+paraSetOribit.CentralBody = 'Sun'
+paraSetOribit.UseCentralBodyGravitationalParameter = False
+paraSetOribit.GravitationalParameter = 398600 # km^3/sec^2
+
+
+
+Create a new Projection Vector
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnVectorDisplacement Sat2EarthCenter: vector component
+VectFactory = vgtSat.Vectors.Factory
+projectionVector = VectFactory.Create('Projection','',18) # eCrdnVectorTypeProjection
+projectionVector.Source.SetVector(Sat2EarthCenter)
+horizontalPlane = vgtSat.Planes.Item('LocalHorizontal')
+projectionVector.ReferencePlane.SetPlane(horizontalPlane)
+
+
+Create a new Time Instant
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# Change DateFormat dimension to epoch seconds to make the time easier to handle in
+# Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+timeInstFactory = vgtSat.Events.Factory
+timeEpoch = timeInstFactory.CreateEventEpoch('FixedTime','Fixed Epoch Time')
+timeEpoch.Epoch = 3600
+
+
+Create a new Time Interval
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# Change DateFormat dimension to epoch seconds to make the time easier to handle in
+# Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+timeIntFactory = vgtSat.EventIntervals.Factory
+timeInterval = timeIntFactory.CreateEventIntervalFixed('TimeInterval','Fixed time interval')
+timeInterval.SetInterval(60,120)
+
+
+Create a new Vector Magnitude Scalar
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgCrdnVectorDisplacement Sat2EarthCenter: vector component
+calcFactory = vgtSat.CalcScalars.Factory
+displScalar = calcFactory.CreateCalcScalarVectorMagnitude('VectorDisplacement','Vector Magnitude of Displacement Vector')
+displScalar.InputVector = Sat2EarthCenter
+
+
+Get a Scalar component and evaluate at a time
+[Python]
+
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# IAgScenario scenario: Scenario object
+deticLatitude = vgtSat.CalcScalars.Item('GroundTrajectory.Detic.LLA.Latitude')
+result = deticLatitude.Evaluate(scenario.StartTime)
+print('The value of detic latitude is #s' # result.Value)
+
+
+Get Center point and Inertial System of Earth CB
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model root
+centerPtEarth = root.CentralBodies.Earth.Vgt.Points.Item('Center')
+icrf = root.CentralBodies.Earth.Vgt.Systems.Item('ICRF')
+
+
+Get default VGT component on vehicle
+[Python]
+
+# IAgSatellite satellite: Satellite object
+vgtSat = satellite.vgt
+# Get handle to the Center point on the satellite
+centerPtSat = vgtSat.Points.Item('Center')
+# Get handle to the Body Y Vector
+bodyYSat = vgtSat.Vectors.Item('Body.Y')
+# Get handle to the Body Axes
+bodyAxes = vgtSat.Axes.Item('Body')
+icrfAxes = vgtSat.Axes.Item('ICRF')
+
+
+Get Times From Defined Time Instant and create an cell array
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+# IAgCrdnProvider vgtSat: Vector Geometry Tool Interface
+# Change DateFormat dimension to epoch seconds to make the time easier to handle in
+# Python
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('EpSec')
+satStart= vgtSat.Events.Item('AvailabilityStartTime')
+start = satStart.FindOccurrence().Epoch
+
+satStop= vgtSat.Events.Item('AvailabilityStopTime')
+stop = satStop.FindOccurrence().Epoch
+interval = [ [start],[540],[600],[stop] ]   #EpSec
+
+
+Change animation mode
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+scenario = root.CurrentScenario
+root.AnimationOptions = 2 # eAniOptionStop
+root.Mode = 32 # eAniXRealtime
+scenario.Animation.AnimStepValue = 1   # second
+scenario.Animation.RefreshDelta = .03  #second
+
+
+
+Change scenario font
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+scenario = root.CurrentScenario
+scenario.VO.MediumFont.Name = 'Arial'
+scenario.VO.MediumFont.PtSize = 18
+scenario.VO.MediumFont.Bold = True
+scenario.VO.MediumFont.Italic = False
+
+
+
+Close an open Scenario
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+root.CloseScenario
+
+
+Close STK
+[Python]
+
+# AgUiApplication uiApplication: STK Application
+uiApplication.Quit
+clear uiApplication root
+
+
+Create a new Scenario
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+root.NewScenario('Example_Scenario')
+
+
+Open a VDF
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+root.LoadVDF(r'C:\Program Files\AGI\STK_ODTK 13\STK\Data\ExampleScenarios\Intro_STK_Space_Systems.vdf','')
+
+
+Reset the scenario time
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+root.Rewind
+
+
+Set unit preferences for Object Model
+[Python]
+
+# IAgStkObjectRoot root: STK Object Model Root
+root.UnitPreferences.Item('DateFormat').SetCurrentUnit('UTCG')
+root.UnitPreferences.Item('Distance').SetCurrentUnit('km')
+
+
+Systems Tool Kit (STK), v13.0; Latest Help Update: October, 2025 - © ANSYS, Inc and/or its affiliated companies. All rights reserved. Unauthorized use, distribution, or reproduction is prohibited.

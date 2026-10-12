@@ -1,0 +1,81 @@
+<?xml version = "1.0" standalone = "yes"?>
+<VAR name = "RotationCoefficientsFile">
+    <SCOPE Class = "CBSpinModel">
+        <VAR name = "Version">
+            <STRING>&quot;1.0.0 a&quot;</STRING>
+        </VAR>
+        <VAR name = "STKVersion">
+            <INT>1210</INT>
+        </VAR>
+        <VAR name = "Description">
+            <STRING>&quot;Attitude Definition defined by coefficients in a file&quot;</STRING>
+        </VAR>
+        <VAR name = "Type">
+            <STRING>&quot;RotCoeffFile&quot;</STRING>
+        </VAR>
+        <VAR name = "UserComment">
+            <STRING>&quot;Attitude Definition defined by coefficients in a file&quot;</STRING>
+        </VAR>
+        <VAR name = "ReadOnly">
+            <BOOL>false</BOOL>
+        </VAR>
+        <VAR name = "Clonable">
+            <BOOL>true</BOOL>
+        </VAR>
+        <VAR name = "Category">
+            <STRING>&quot;Mimas&quot;</STRING>
+        </VAR>
+        <VAR name = "IdentifierInformation">
+            <SCOPE>
+                <VAR name = "Identifier">
+                    <STRING>&quot;{67175692-B07E-49D1-A871-8CBE0B4B1E77}&quot;</STRING>
+                </VAR>
+                <VAR name = "Version">
+                    <STRING>&quot;1&quot;</STRING>
+                </VAR>
+                <VAR name = "SdfInformation">
+                    <SCOPE>
+                        <VAR name = "Version">
+                            <STRING>&quot;0.0&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Url">
+                            <STRING>&quot;&quot;</STRING>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+                <VAR name = "SourceIdentifierInformation">
+                    <SCOPE>
+                        <VAR name = "Identifier">
+                            <STRING>&quot;{BE1308DA-C294-4584-BA9D-0C4706F8A998}&quot;</STRING>
+                        </VAR>
+                        <VAR name = "Version">
+                            <STRING>&quot;1&quot;</STRING>
+                        </VAR>
+                        <VAR name = "SdfInformation">
+                            <SCOPE>
+                                <VAR name = "Version">
+                                    <STRING>&quot;0.0&quot;</STRING>
+                                </VAR>
+                                <VAR name = "Url">
+                                    <STRING>&quot;&quot;</STRING>
+                                </VAR>
+                            </SCOPE>
+                        </VAR>
+                    </SCOPE>
+                </VAR>
+            </SCOPE>
+        </VAR>
+        <VAR name = "ShooterControls">
+            <LIST />
+        </VAR>
+        <VAR name = "Filename">
+            <STRING>&quot;&quot;</STRING>
+        </VAR>
+        <VAR name = "Model">
+            <STRING>&quot;Coefficients from the IAU 2009 parameter set&quot;</STRING>
+        </VAR>
+        <VAR name = "ModelName">
+            <STRING>&quot;IAU 2009&quot;</STRING>
+        </VAR>
+    </SCOPE>
+</VAR>
