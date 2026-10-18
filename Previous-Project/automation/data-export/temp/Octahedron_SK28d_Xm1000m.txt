@@ -1,0 +1,20 @@
+                                                                                                                                                                                                                               16 Oct 2026 17:43:58
+Satellite-Octahedron_SK28d_Xm1000m
+
+
+                                        Maneuver Number                 Segment                     Start Time (UTCG)           Stop Time (UTCG)        Duration (sec)    Est./Act. Finite Burn Duration (sec)    Delta V (m/sec)    Fuel Used (kg)
+                                        ---------------    ---------------------------------    ------------------------    ------------------------    --------------    ------------------------------------    ---------------    --------------
+                                                      1    Sequence.Target_Sequence.Maneuver     6 Oct 2022 07:10:00.000     6 Oct 2022 07:10:00.000             0.000                                   0.000       0.0004450974             0.000
+                                                      2    Sequence.Target_Sequence.Maneuver     3 Nov 2022 07:10:00.000     3 Nov 2022 07:10:00.000             0.000                                   0.000       0.0007360816             0.000
+                                                      3    Sequence.Target_Sequence.Maneuver     1 Dec 2022 07:10:00.000     1 Dec 2022 07:10:00.000             0.000                                   0.000       0.0006123103             0.000
+                                                      4    Sequence.Target_Sequence.Maneuver    29 Dec 2022 07:10:00.000    29 Dec 2022 07:10:00.000             0.000                                   0.000       0.0006014326             0.000
+                                                      5    Sequence.Target_Sequence.Maneuver    26 Jan 2023 07:10:00.000    26 Jan 2023 07:10:00.000             0.000                                   0.000       0.0005984805             0.000
+                                                      6    Sequence.Target_Sequence.Maneuver    23 Feb 2023 07:10:00.000    23 Feb 2023 07:10:00.000             0.000                                   0.000       0.0006851542             0.000
+                                                      7    Sequence.Target_Sequence.Maneuver    23 Mar 2023 07:10:00.000    23 Mar 2023 07:10:00.000             0.000                                   0.000       0.0008780511             0.000
+
+Statistics
+----------
+Total Duration                                                                                                                                                   0.000                                                                             
+Total Est./Act. Finite Burn Duration                                                                                                                                                                     0.001                                     
+Total Delta V                                                                                                                                                                                                        0.0045566077                  
+Total Fuel Used                                                                                                                                                                                                                               0.000

@@ -1,0 +1,18 @@
+Satellite Name,Octahedron_SK28d_Zm1000m
+Export Time,16 Oct 2026 17:43:58
+
+Statistics
+Total Duration (sec),0.000
+Total Est./Act. Finite Burn Duration (sec),0.001
+Total Delta V (m/sec),0.0028640661
+Total Fuel Used (kg),0.000
+
+--- BEGIN DATA ---
+Maneuver Number,Segment,Start Time (UTCG),Stop Time (UTCG),Duration (sec),Est./Act. Finite Burn Duration (sec),Delta V (m/sec),Fuel Used (kg)
+1,Sequence.Target_Sequence.Maneuver,6 Oct 2022 07:10:00.000,6 Oct 2022 07:10:00.000,0.000,0.000,0.0003207564,0.000
+2,Sequence.Target_Sequence.Maneuver,3 Nov 2022 07:10:00.000,3 Nov 2022 07:10:00.000,0.000,0.000,0.0004878850,0.000
+3,Sequence.Target_Sequence.Maneuver,1 Dec 2022 07:10:00.000,1 Dec 2022 07:10:00.000,0.000,0.000,0.0003508783,0.000
+4,Sequence.Target_Sequence.Maneuver,29 Dec 2022 07:10:00.000,29 Dec 2022 07:10:00.000,0.000,0.000,0.0003150455,0.000
+5,Sequence.Target_Sequence.Maneuver,26 Jan 2023 07:10:00.000,26 Jan 2023 07:10:00.000,0.000,0.000,0.0003312117,0.000
+6,Sequence.Target_Sequence.Maneuver,23 Feb 2023 07:10:00.000,23 Feb 2023 07:10:00.000,0.000,0.000,0.0004358134,0.000
+7,Sequence.Target_Sequence.Maneuver,23 Mar 2023 07:10:00.000,23 Mar 2023 07:10:00.000,0.000,0.000,0.0006224757,0.000
