@@ -1,0 +1,11 @@
+# Generated experiment results, animations and STK scenarios
+/Own-Code/First-Experiment/results/
+
+# Python and Jupyter caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
