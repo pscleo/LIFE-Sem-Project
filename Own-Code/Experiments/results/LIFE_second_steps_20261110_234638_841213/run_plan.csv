@@ -1,0 +1,7 @@
+operation,duration_days,spacing_hours,spacecraft,targeted_legs
+Slew about combiner,0.25,1.0,5,30
+Slew about combiner,0.25,2.0,5,15
+Formation resizing,0.25,1.0,5,30
+Formation resizing,0.25,2.0,5,15
+Resizing and rotation,0.25,1.0,5,30
+Resizing and rotation,0.25,2.0,5,15
